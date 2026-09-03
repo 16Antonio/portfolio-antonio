@@ -1,0 +1,286 @@
+/* --- 1. CONTENEDOR Y SECCIONES GLOBALES --- */
+.portfolio-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.seccion {
+  padding: 5rem 0;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.titulo-seccion {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: var(--texto-blanco);
+  display: flex;
+  align-items: center;
+}
+
+.titulo-seccion::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 300px;
+  background-color: #233554;
+  margin-left: 20px;
+}
+
+/* --- 2. HERO (PORTADA) --- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.saludo {
+  color: var(--acento);
+  font-family: var(--fuente-codigo);
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.nombre {
+  font-size: clamp(2.5rem, 6vw, 5rem); 
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.puesto {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 600;
+  color: var(--texto-gris);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.descripcion {
+  max-width: 550px;
+  font-size: 1.1rem;
+  color: var(--texto-gris);
+  margin-bottom: 3rem;
+}
+
+.descripcion strong {
+  color: var(--texto-blanco);
+}
+
+.botones-hero {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn-primario, .btn-secundario {
+  padding: 0.9rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: var(--fuente-codigo);
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.btn-primario {
+  background-color: transparent;
+  color: var(--acento);
+  border: 1px solid var(--acento);
+}
+
+.btn-primario:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  transform: translateY(-3px);
+}
+
+.btn-secundario {
+  color: var(--texto-blanco);
+  border: 1px solid var(--texto-gris);
+}
+
+.btn-secundario:hover {
+  border-color: var(--texto-blanco);
+  transform: translateY(-3px);
+}
+
+/* --- 3. SOBRE MÍ & HABILIDADES --- */
+
+.seccion{
+  width: 100%;
+}
+
+.sobre-mi-layout {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 3rem;
+}
+
+.sobre-mi-texto p {
+  color: var(--texto-gris);
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.grid-habilidades {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.grid-habilidades li {
+  font-family: var(--fuente-codigo);
+  font-size: 0.9rem;
+  color: var(--texto-gris);
+}
+
+.grid-habilidades li::first-letter {
+  color: var(--acento);
+}
+
+/* Media query para móviles: pone las columnas una debajo de otra */
+@media (max-width: 768px) {
+  .sobre-mi-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- 4. PROYECTOS --- */
+.proyecto-tarjeta {
+  background-color: var(--bg-tarjetas);
+  border-radius: 8px;
+  padding: 2.0rem;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+.proyecto-tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.9);
+}
+
+.proyecto-destacado {
+  color: var(--acento);
+  font-family: var(--fuente-codigo);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.proyecto-titulo {
+  font-size: 1.7rem;
+  color: var(--texto-blanco);
+  margin-bottom: 1.5rem;
+}
+
+.proyecto-descripcion {
+  color: var(--texto-gris);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.proyecto-descripcion ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.proyecto-descripcion li {
+  margin-bottom: 0.5rem;
+}
+
+.proyecto-descripcion strong {
+  color: var(--texto-blanco);
+}
+
+.proyecto-tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.proyecto-tecnologias li {
+  font-family: var(--fuente-codigo);
+  font-size: 0.85rem;
+  color: var(--acento);
+  background-color: rgba(16, 185, 129, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+}
+
+.proyecto-enlaces {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.enlace-icono {
+  color: var(--texto-blanco);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.enlace-icono:hover {
+  color: var(--acento);
+}
+
+/* --- 5. FOOTER --- */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 5rem;
+  padding-bottom: 4rem; /* Da espacio extra al final de la página */
+}
+
+/* Forzamos el estilo del enlace en todos sus estados (normal, visitado, etc.) */
+.footer a, 
+.footer a:visited {
+  color: var(--texto-gris);
+  font-family: var(--fuente-codigo);
+  font-size: 0.9rem;
+  text-decoration: none; /* Esto elimina el subrayado por defecto */
+  transition: color 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+/* Efecto al pasar el ratón */
+.footer a:hover {
+  color: var(--acento);
+}
+/* LAYOUT DE DOS COLUMNAS PARA PROYECTOS */
+.proyecto-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* La imagen ocupa 1 parte, el texto 1.2 partes */
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* ESTILOS DE LA IMAGEN */
+.proyecto-imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0.85) contrast(1.1); /* La oscurece un poco para que encaje con el modo oscuro */
+}
+
+.proyecto-imagen:hover img {
+  transform: scale(1.02); /* Efecto zoom al pasar el ratón */
+  filter: brightness(1) contrast(1.1); /* Se ilumina al pasar el ratón */
+}
+
+/* MEDIA QUERY PARA MÓVILES (Una columna) */
+@media (max-width: 850px) {
+  .proyecto-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .proyecto-imagen img {
+    margin-bottom: 1.5rem;
+  }
+}

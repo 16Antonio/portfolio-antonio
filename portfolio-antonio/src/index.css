@@ -1,0 +1,32 @@
+/* 1. DEFINICIÓN DE VARIABLES GLOBALES */
+:root {
+  /* Paleta de colores Dark Mode */
+  --bg-principal: #0f172a;       /* Fondo general (Pizarra muy oscuro) */
+  --bg-tarjetas: #1e293b;        /* Fondo para los proyectos */
+  --texto-blanco: #f8fafc;       /* Texto principal */
+  --texto-gris: #94a3b8;         /* Texto secundario / subtítulos */
+  
+  /* Color de Acento: Un verde esmeralda estilo terminal/tech */
+  --acento: #10b981;             
+  --acento-hover: #059669;       
+
+  /* Tipografías que acabamos de importar */
+  --fuente-ui: 'Inter', sans-serif;
+  --fuente-codigo: 'Fira Code', monospace;
+}
+
+/* 2. RESETEO BÁSICO (Para quitar márgenes feos por defecto) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. ESTILOS DEL BODY */
+body {
+  background-color: var(--bg-principal);
+  color: var(--texto-blanco);
+  font-family: var(--fuente-ui);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased; /* Hace que la letra se vea más nítida */
+}

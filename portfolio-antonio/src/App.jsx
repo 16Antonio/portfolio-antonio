@@ -5,7 +5,6 @@ function App() {
   return (
     <main className="portfolio-container">
       
-      {/* 1. SECCIÓN HERO (PORTADA) */}
       <section className="hero">
         <p className="saludo">👋 Hola, mi nombre es</p>
         <h1 className="nombre">Antonio M. Gámez.</h1>
@@ -21,13 +20,19 @@ function App() {
           <a href="https://github.com/16Antonio" target="_blank" rel="noreferrer" className="btn-primario">
             Visitar GitHub
           </a>
-          <a href="#proyectos" className="btn-secundario">
-            Ver Proyectos
+          <a href="https://www.linkedin.com/in/antoniomgp/" target="_blank" rel="noreferrer" className="btn-primario">
+            LinkedIn
+          </a>
+          <a href="mailto:antoniomgp2007@gmail.com" className="btn-secundario">
+            Contactar
+          </a>
+          {/* El atributo download fuerza la descarga del archivo */}
+          <a href="/CV_AntonioGamez.pdf" download className="btn-secundario">
+            📄 Descargar CV
           </a>
         </div>
       </section>
 
-      {/* 2. SECCIÓN SOBRE MÍ Y HABILIDADES */}
       <section id="sobre-mi" className="seccion">
         <h2 className="titulo-seccion">Sobre Mí & Tecnologías</h2>
         
@@ -60,15 +65,7 @@ function App() {
         </div>
       </section>
 
-      {/* 3. SECCIÓN PROYECTOS (¡Ahora desde su propio componente!) */}
       <Proyectos />
-
-      {/* 4. FOOTER (PIE DE PÁGINA) */}
-      <footer className="footer">
-        <a href="https://github.com/16Antonio" target="_blank" rel="noreferrer">
-          Diseñado y construido por Antonio M. Gámez
-        </a>
-      </footer>
       
     </main>
   )

@@ -10,6 +10,7 @@ const listaProyectos = [
         detalles: [
             "Backend: API REST securizada con JWT y Spring Security. Empaquetada con Docker y alojada en Render.",
             "Frontend: Interfaz SPA reactiva construida con React y Vite, desplegada en Vercel.",
+            "Arquitectura: Sistema de Roles dinámicos (RBAC), control global de excepciones y validación de datos para evitar vulnerabilidades como el Mass Assignment.",
             "Datos: Base de datos MySQL en la nube (Aiven) con sistema de Data Seeding automatizado."
         ],
         tecnologias: ["Java 21", "Spring Boot", "React", "Docker", "MySQL"],
